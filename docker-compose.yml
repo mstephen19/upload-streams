@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+    server:
+        container_name: 'server'
+        build:
+            context: './server'
+        ports:
+            - '3001:3001'
+        volumes:
+            - './server/src:/app/src:ro'
+            - '/app/node_modules'
+            - './server/audio:/app/audio'
+    client:
+        container_name: 'client'
+        depends_on:
+            - server
+        ports:
+            - '3000:5173'
+        build:
+            context: './client'
+        volumes:
+            - './client/src:/app/src:ro'
+            - '/app/node_modules'
+        stdin_open: true
+        tty: true
