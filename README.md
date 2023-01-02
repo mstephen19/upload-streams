@@ -20,7 +20,7 @@ Ensure that you have [Docker](https://www.docker.com/) installed and that the Do
 docker compose up --build -d
 ```
 
-You can then view the UI by visiting [http://localhost:3000](http://localhost:3000). All uploaded files will be reflected within the **server/audio/** directory.
+You can then view the UI by visiting [http://localhost:3000](http://localhost:3000). All uploaded files will be reflected within the **/server/audio/** directory.
 
 ## License
 
