@@ -12,13 +12,15 @@ The workflow demonstrated by this app goes as follows:
 4. The client sends each chunk of the file by emitting the **upload_chunk_{SESSION-ID}** event. It waits for the server to acknowledge that the chunk has been processed before sending the next one.
 5. Once the server has received the last chunk, it emits the **upload_success_{SESSION-ID}** to the client and the **File uploaded successfully** message is displayed to the user.
 
-## Setup
+## Run it
 
 Ensure that you have [Docker](https://www.docker.com/) installed and that the Docker daemon is running on your machine. Then, within the project's directory, run the following command:
 
 ```shell
 docker compose up --build -d
 ```
+
+You can then view the UI by visiting [http://localhost:3000](http://localhost:3000). All uploaded files will be reflected within the **server/audio/** directory.
 
 ## License
 
